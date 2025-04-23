@@ -1,14 +1,41 @@
 import {
   int,
-  bigint,
   text,
-  singlestoreTable,
+  index,
+  singlestoreTableCreator,
+  bigint,
 } from "drizzle-orm/singlestore-core";
 
-export const users = singlestoreTable("users_table", {
-  id: bigint("id", { mode: "bigint" }).primaryKey().autoincrement(),
+export const createTable = singlestoreTableCreator(
+  (name) => `envoy-drive_${name}`,
+);
 
-  name: text("name"),
+export const files = createTable(
+  "files_table",
+  {
+    id: bigint("id", { mode: "number", unsigned: true })
+      .primaryKey()
+      .autoincrement(),
+    name: text("name").notNull(),
+    size: int("size").notNull(),
+    url: text("url").notNull(),
+    parent: bigint("parent", { mode: "number", unsigned: true }).notNull(),
+  },
+  (t) => {
+    return [index("parent_index").on(t.parent)];
+  },
+);
 
-  age: int("age"),
-});
+export const folders = createTable(
+  "folders_table",
+  {
+    id: bigint("id", { mode: "number", unsigned: true })
+      .primaryKey()
+      .autoincrement(),
+    name: text("name").notNull(),
+    parent: bigint("parent", { mode: "number", unsigned: true }),
+  },
+  (t) => {
+    return [index("parent_index").on(t.parent)];
+  },
+);
