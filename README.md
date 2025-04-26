@@ -28,3 +28,4 @@ Just finished up connecting database, next steps:
 - [] Upload files to the right folder
 - [] Delete files button
 - [] Allow files that aren't images to be uploaded
+- [] Homepage
