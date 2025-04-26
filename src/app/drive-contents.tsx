@@ -3,7 +3,10 @@
 import { Upload, ChevronRight } from "lucide-react";
 import { Button } from "~/components/ui/button";
 import { FileRow, FolderRow } from "./file-row";
-import type { files, folders } from "~/server/db/schema";
+import type {
+  files_table as files,
+  folders_table as folders,
+} from "~/server/db/schema";
 import Link from "next/link";
 
 export default function DriveContents(props: {
