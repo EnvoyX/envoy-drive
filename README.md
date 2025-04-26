@@ -3,7 +3,7 @@
 ## TODO
 
 - [x] Set up database and data model
-- [] Move folder open state to URL
+- [x] Move folder open state to URL
 - [] Add auth (Clerk)
 - [] Add file uploding (uploadthing)
 - [] Add analytics (posthog)
@@ -19,6 +19,6 @@ Just finished up connecting database, next steps:
 
 ## Note 4-25-2025
 
-- [ ] Change folders to link components, remove all client state
-- [ ] Clean up the database and data fetching patterns
+- [x] Change folders to link components, remove all client state
+- [x] Clean up the database and data fetching patterns
 - [ ] Create real homepage
