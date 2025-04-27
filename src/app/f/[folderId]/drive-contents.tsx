@@ -16,6 +16,8 @@ import {
 } from "@clerk/nextjs";
 import { UploadButton } from "~/utils/uploadthing";
 import { useRouter } from "next/navigation";
+import { toast } from "sonner";
+import LoadingSpinnerSVG from "./_components/LoadingSpinner";
 export default function DriveContents(props: {
   files: (typeof files.$inferSelect)[];
   folders: (typeof folders.$inferSelect)[];
@@ -71,10 +73,30 @@ export default function DriveContents(props: {
             ))}
           </ul>
         </div>
+
         <UploadButton
           endpoint={`driveUploader`}
+          onUploadBegin={() => {
+            toast(
+              <div className="flex items-center gap-2">
+                <LoadingSpinnerSVG />{" "}
+                <span className="text-lg">Uploading...</span>
+              </div>,
+              {
+                duration: 100000,
+                id: "upload-begin",
+              },
+            );
+          }}
+          onUploadError={(error) => {
+            toast.dismiss("upload-begin");
+            toast.error("Upload failed!");
+            console.log(error);
+          }}
           onClientUploadComplete={() => {
             navigate.refresh();
+            toast.dismiss("upload-begin");
+            toast.success("Upload complete!");
           }}
           input={{ folderId: props.currentFolderId }}
         ></UploadButton>

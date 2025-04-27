@@ -9,7 +9,7 @@
 - [x] Add analytics (posthog)
 - [x] Make sure sort order is consistent
 - [x] Add delete
-- [] Real homepage + onboarding
+- [x] Real homepage + onboarding
 
 ## Note 4-23-2025
 
@@ -49,5 +49,7 @@ Note: Check if user is owner before showing the folder page.
 Note: Implement the same logic on "Envoy-Gallery"
 
 ### Toasts!
+
+Note : Done✅
 
 ### Gray out a row while it's being deleted
