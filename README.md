@@ -35,3 +35,19 @@ Just finished up connecting database, next steps:
 ### Folder Deletion
 
 Note : Make sure to fetch all of the folders that have it as a parent, and their children too
+
+### Folder creations
+
+Note: Make a server action that takes a name and parentId, and creates a folder with that name and parentId (don't forget to set the ownerId).
+
+### Access control
+
+Note: Check if user is owner before showing the folder page.
+
+### Make a "file view" page
+
+Note: Implement the same logic on "Envoy-Gallery"
+
+### Toasts!
+
+### Gray out a row while it's being deleted
