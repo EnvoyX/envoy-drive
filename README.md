@@ -6,7 +6,8 @@
 - [x] Move folder open state to URL
 - [x] Add auth (Clerk)
 - [x] Add file uploding (uploadthing)
-- [] Add analytics (posthog)
+- [x] Add analytics (posthog)
+- [x] Make sure sort order is consistent
 - [] Add delete
 - [] Real homepage + onboarding
 
