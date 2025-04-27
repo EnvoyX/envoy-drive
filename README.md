@@ -8,7 +8,7 @@
 - [x] Add file uploding (uploadthing)
 - [x] Add analytics (posthog)
 - [x] Make sure sort order is consistent
-- [] Add delete
+- [x] Add delete
 - [] Real homepage + onboarding
 
 ## Note 4-23-2025
@@ -29,3 +29,9 @@ Just finished up connecting database, next steps:
 
 - [x] Add "Ownership" to files and folders
 - [x] Upload files to the right folder
+
+## Some fun features to add later
+
+### Folder Deletion
+
+Note : Make sure to fetch all of the folders that have it as a parent, and their children too
