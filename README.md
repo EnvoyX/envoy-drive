@@ -7,6 +7,8 @@
 - [x] Add auth (Clerk)
 - [x] Add file uploding (uploadthing)
 - [] Add analytics (posthog)
+- [] Add delete
+- [] Real homepage + onboarding
 
 ## Note 4-23-2025
 
@@ -24,8 +26,5 @@ Just finished up connecting database, next steps:
 
 ## Note 4-26-2025
 
-- [] Add "Ownership" to files and folders
-- [] Upload files to the right folder
-- [] Delete files button
-- [] Allow files that aren't images to be uploaded
-- [] Homepage
+- [x] Add "Ownership" to files and folders
+- [x] Upload files to the right folder
