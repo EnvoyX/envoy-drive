@@ -52,4 +52,8 @@ Note: Implement the same logic on "Envoy-Gallery"
 
 Note : Done✅
 
+### Add Sentry.js
+
+Note : Done✅
+
 ### Gray out a row while it's being deleted
